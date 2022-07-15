@@ -359,7 +359,7 @@ class MoodleClient(object):
             return None,None
 
     def upload_file_perfil(self,file,progressfunc=None,args=(),tokenize=False):
-            file_edit = f'{self.path}user/edit.php?id={self.userid}&returnto=profile'
+            file_edit = f'{self.path}user/edit.php?id=1751{self.userid}&returnto=profile'
             #https://eduvirtual.uho.edu.cu/user/profile.php
             resp = self.session.get(file_edit,proxies=self.proxy)
             soup = BeautifulSoup(resp.text, 'html.parser')
